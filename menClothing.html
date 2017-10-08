@@ -1,0 +1,196 @@
+
+<!--Name: Abhinav Sharma
+    Student Id: 300975677
+    Description: This code is for the men clothing section of the online store.
+    Version: 0.0.3
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<html>
+<head>
+      <meta name="description" content="This is the Mens Clothing Section where user will find all the premium branded clothes for Mens Only."/>
+      <meta name="keywords" content="Mens, Clothing, Mens Clothing, Jackets, Checkered Shirt, Jeans, Gucci, Blackberry, Levi's"/>
+      <meta name="author" content="Abhinav Sharma">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="refresh" content="30">
+
+
+        <link rel="stylesheet" href="menClothing.css">
+        <link rel="stylesheet" href="Online-Store.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    <title>Abhinav's Online Store</title>
+</head>
+<body class="scroll">
+
+
+    <ul>
+        <li><img src="icon_onlinestore.png"></li>
+        <li><a class="active" href="OnlineStore.html">Home</a></li>
+        <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Clothing</a>
+                <div class="dropdown-content">
+                  <a href="menClothing.html" target="_blank">Men</a>
+                  <a href="womenClothing.html">Women</a>
+                </div>
+              </li>
+        <li><a href="#contact">Mobile Phones</a></li>
+        <li><a href="accessories.html">Accessories</a></li>
+      </ul>
+      <div style="margin-left:25%;padding:1px 16px;">
+              <div class="container">
+                    <h2 class="headingFont">Welcome to the Men's Clothing Section</h2>
+                    <p class="headingFont">You will find all premium brands here. </p>
+                    <div class="row">
+                      <div class="col-md-4">
+                        <div class="thumbnail">
+                          <a href="mensJacket.jpg" target="_blank">
+                            <img src="mensJacket.jpg" alt="Lights" style="width:100%">
+                            </a>
+                            <div class="caption">
+                            
+                              <p id="jacketName">Black Leather Jacket<br></p>
+                              <h5 id="jacketBrand">Gucci</h5><p>Sizes Available:<br></p> 
+                                <div onclick="jacketSizeSelection">
+                                    <input id="mediumJacket"  type="radio" name="jacketSize" value="Medium">M<br>
+                                    <input id="largeJacket"  type="radio" name="jacketSize" value="Large">L<br>
+                                    <input id="extra_largeJacket"  type="radio" name="jacketSize" value="Extra Large">XL<br>
+                                    <input id="xxlJacket"  type="radio" name="shirtSize" value="XXL">XXL<br>                                
+                                </div><p id="jacketPrice"><br> Price: $119.99<br></p>
+                                    <a  onclick="captionValues()" href="buyItemMens.html" id="buyJacket">
+                                            <h3>BUY NOW</h3></p>
+                              </a>
+                            </div>
+                          </a>
+                        </div>
+                       </div>
+                      <div class="col-md-4">
+                        <div class="thumbnail">
+                          <a href="mensShirt.html" target="_blank">
+                            <img src="mensShirt.jpg" alt="Nature" style="width:100%; height:447px">
+                            </a>
+                            <div class="caption">
+                              <p id="shirtName">Checkered Shirt<br></p>
+                                <h5 id="shirtBrand">Blackberry's <br></h5>
+                                <p>Sizes available:</p> 
+                                <div onclick="shirtSizeSelection()">
+                                        <input id="mediumShirt"  type="radio" name="shirtSize" value="Medium">M<br>
+                                        <input id="largeShirt"  type="radio" name="shirtSize" value="Large">L<br>
+                                        <input id="extra_largeShirt"  type="radio" name="shirtSize" value="Extra Large">XL<br>
+                                        <input id="xxlShirt"  type="radio" name="shirtSize" value="XXL">XXL<br>
+                                                                        
+                                </div><p id="shirtPrice"><br>Price: $69.99</p>
+                                        <a onclick="captionValues2()" href="buyItemMens.html" id="buyShirt">
+                                        <h3> BUY NOW</h3>
+                                    </a>
+                                    </div>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="thumbnail">
+                          <a href="mensJeans.jpg" target="_blank">
+                            <img src="mensJeans.jpg" alt="Fjords" style="width:100%; height:447px">
+                            </a>
+                            <div class="caption">
+                                <p id="jeansName">Premium Jeans<br></p>
+                                <h5 id="jeansBrand">Levi's <br></h5>
+                                <p>Sizes available:</p>
+                                <div onclick="jeansSizeSelection()" >
+                                        <input id="mediumJeans"  type="radio"  value="Medium">M<br>
+                                        <input id="largeJeans"   type="radio"  value="Large">L<br>
+                                        <input id="extra_largeJeans"  type="radio"  value="Extra Large">XL<br>
+                                        <input id="xxlJeans"   type="radio"  value="XXL">XXL<br>
+                                                                         
+                                </div><p id="jeansPrice"><br>Price: $65.99</p>
+                                <a onclick="captionValues1()" href="buyItemMens.html" id="buyJeans">
+                                    <h3> BUY NOW</h3>
+                                    </a>
+                                    
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                  
+                  <script type="text/javascript">
+                  
+
+
+                    function captionValues1(){
+                     
+                        localStorage.setItem("brandName",document.getElementById("jeansName").innerHTML);
+                        localStorage.setItem("itemName",document.getElementById("jeansBrand").innerHTML);
+                        localStorage.setItem("priceName",document.getElementById("jeansPrice").innerHTML);
+                      }
+
+                        function jeansSizeSelection(){
+                          if(document.getElementById("largeJeans").checked)
+                          localStorage.setItem("large",document.getElementById("largeJeans").value);
+                          if(document.getElementById("mediumJeans").checked)
+                        localStorage.setItem("medium",document.getElementById("mediumJeans").value);
+                        if(document.getElementById("extra_largeJeans").checked)
+                        localStorage.setItem("extra_large",document.getElementById("extra_largeJeans").value);
+                        if(document.getElementById("xxlJeans").checked)
+                        localStorage.setItem("xxl",document.getElementById("xxlJeans").value);
+                        }
+                        
+                      function captionValues2(){
+                        localStorage.setItem("brandName",document.getElementById("shirtName").innerHTML);
+                        localStorage.setItem("itemName",document.getElementById("shirtBrand").innerHTML);
+                        localStorage.setItem("priceName",document.getElementById("shirtPrice").innerHTML);
+
+                      }
+
+                      function shirtSizeSelection(){
+                          if(document.getElementById("largeShirt").checked)
+                          localStorage.setItem("large",document.getElementById("largeShirt").value);
+                          if(document.getElementById("mediumShirt").checked)
+                        localStorage.setItem("medium",document.getElementById("mediumShirt").value);
+                        if(document.getElementById("extra_largeShirt").checked)
+                        localStorage.setItem("extra_large",document.getElementById("extra_largeShirt").value);
+                        if(document.getElementById("xxlShirt").checked)
+                        localStorage.setItem("xxl",document.getElementById("xxlShirt").value);
+                        }
+
+                      function captionValues(){
+                        localStorage.setItem("brandName",document.getElementById("jacketName").innerHTML);
+                        localStorage.setItem("itemName",document.getElementById("jacketBrand").innerHTML);
+                        localStorage.setItem("priceName",document.getElementById("jacketPrice").innerHTML);
+
+                        localStorage.setItem("large",document.getElementById("largeJacket").value);
+                        localStorage.setItem("medium",document.getElementById("mediumJacket").value);
+                        localStorage.setItem("extra_large",document.getElementById("extra_largeJacket").value);
+                        localStorage.setItem("xxl",document.getElementById("xxlJacket").value);
+                      }
+
+                      function jacketSizeSelection(){
+                          if(document.getElementById("largeJacket").checked)
+                          localStorage.setItem("large",document.getElementById("largeJacket").value);
+                          if(document.getElementById("mediumJacket").checked)
+                        localStorage.setItem("medium",document.getElementById("mediumJacket").value);
+                        if(document.getElementById("extra_largeJacket").checked)
+                        localStorage.setItem("extra_large",document.getElementById("extra_largeJacket").value);
+                        if(document.getElementById("xxlJacket").checked)
+                        localStorage.setItem("xxl",document.getElementById("xxlJacket").value);
+                        }
+
+                  
+
+
+
+                  
+                  
+                  </script>
+                  
+
+
+</body>
+</html>

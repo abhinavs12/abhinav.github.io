@@ -1,0 +1,161 @@
+<!--Name: Abhinav Sharma
+    Student Id: 300975677
+    Description: This code is for Order Summary page of the online store website.
+    Version: 0.0.3
+-->
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<html>
+<head>
+        <link rel="stylesheet" href="menClothing.css">
+        <link rel="stylesheet" href="Online-Store.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    <title>Abhinav's Online Store</title>
+</head>
+<body>
+        <ul>
+                <li><img src="icon_onlinestore.png"></li>
+                <li><a class="active" href="OnlineStore.html">Home</a></li>
+                <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn">Clothing</a>
+                        <div class="dropdown-content">
+                          <a href="menClothing.html" target="_blank">Men</a>
+                          <a href="womenClothing.html">Women</a>
+                        </div>
+                      </li>
+                <li><a href="#contact">Mobile Phones</a></li>
+                <li><a href="accessories.html">Accessories</a></li>
+              </ul>
+              
+              <div  class="orderData" style="margin-left:25%;padding:1px 16px;height:1000px;">
+                <h1 id="result"></h1>
+                <h2 id="result1"></h2>
+                <h3>Size Selected is: </h3>
+                <h3 id="result2"></h3>
+                <h3 id="result3"></h3>
+
+              <div class="orderData">
+                    <br>
+                    <br>
+                <h1 >Payment Details:</h3>
+                    <h2>Name:</h2>
+                    <input type="text">
+                    <h2>Delivery Address:</h2>
+                    <input type="text">
+                    <h2>Telephone No:</h2>
+                    <input type="number">
+                    <h2>Credit Card No:</h2>
+                    <input type="number">
+                    <h2>Expiry Date:</h2>
+                    <input type="date">
+                    <h2>CVV:</h2>
+                    <input type="number">
+                    <br><br>
+              </div>
+                
+ 
+
+
+
+
+                <div id="overlay" onclick="off()">
+                        <div id="text">Your Order is Confirmed
+                                <h1 id="result5"></h1>
+                                <h2 id="result6"></h2>
+                                <h3>Size Selected is: </h3>
+                                <h3 id="result7"></h3>
+                                <h3 id="result8"></h3>
+
+
+                                <script type="text/javascript">
+                                    
+                                    document.getElementById("result5").innerHTML = localStorage.getItem("brandName");
+                                    document.getElementById("result6").innerHTML = localStorage.getItem("itemName");
+                                    
+                        
+                                    if(localStorage.getItem("large") != null)
+                                    document.getElementById("result7").innerHTML = localStorage.getItem("large");
+                        
+                                    
+                        
+                                    if(localStorage.getItem("medium") != null)
+                                    document.getElementById("result7").innerHTML = localStorage.getItem("medium");
+                        
+                                    if(localStorage.getItem("extra_large") != null)
+                                    document.getElementById("result7").innerHTML = localStorage.getItem("extra_large");
+                                    if(localStorage.getItem("xxl") != null)
+                                    document.getElementById("result7").innerHTML = localStorage.getItem("xxl");
+                                    
+                                    document.getElementById("result8").innerHTML = localStorage.getItem("priceName");
+                        
+                                    </script>
+
+                                    <a href="OnlineStore.html">
+                                        <button>Back to Home Page</button>
+                                    </a>
+
+
+                        </div>
+                      </div>
+                      
+
+
+
+                      <div style="padding:20px">
+                        
+                        <button onclick="on()">Confirm Order</button>
+                      </div>
+                      
+                      <script>
+                      function on() {
+                          document.getElementById("overlay").style.display = "block";
+                      }
+                      
+                      function off() {
+                          document.getElementById("overlay").style.display = "none";
+                      }
+                      </script>
+                      
+
+                
+
+
+            </div>
+
+
+            
+
+            
+            <script type="text/javascript">
+            
+            document.getElementById("result").innerHTML = localStorage.getItem("brandName");
+            document.getElementById("result1").innerHTML = localStorage.getItem("itemName");
+            
+
+            if(localStorage.getItem("large") != null)
+            document.getElementById("result2").innerHTML = localStorage.getItem("large");
+
+            
+
+            if(localStorage.getItem("medium") != null)
+            document.getElementById("result2").innerHTML = localStorage.getItem("medium");
+
+            if(localStorage.getItem("extra_large") != null)
+            document.getElementById("result2").innerHTML = localStorage.getItem("extra_large");
+            
+            if(localStorage.getItem("xxl") != null)
+            document.getElementById("result2").innerHTML = localStorage.getItem("xxl");
+            
+            document.getElementById("result3").innerHTML = localStorage.getItem("priceName");
+
+            </script>
+
+</body>
+</html>
